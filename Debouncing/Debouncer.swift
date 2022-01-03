@@ -30,6 +30,7 @@ class Debouncer : NSObject {
     }
 
     @objc func fire() {
+        print("fire is called")
         self.callback()
     }
 }
