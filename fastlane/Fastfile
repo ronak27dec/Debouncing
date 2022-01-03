@@ -1,0 +1,19 @@
+#update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  
+	desc "Runs all the tests"
+  	lane :test do
+    	scan
+  	end
+
+	desc "Creates signed build ipa"
+	lane :beta do
+  	get_certificates           # invokes cert
+  	get_provisioning_profile   # invokes sigh
+  	build_app
+	end
+
+end
