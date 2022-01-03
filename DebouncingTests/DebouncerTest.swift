@@ -20,8 +20,12 @@ class DebouncerTest: XCTestCase {
 
     func testCall() {
         sut.call()
-
         XCTAssertTrue(sut.timer != nil)
+    }
+
+    func testFire() {
+        sut.fire()
+        XCTAssertNotNil(sut.callback)
     }
 
     func someWebServiceCall() {
