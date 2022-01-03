@@ -25,7 +25,6 @@ class DebouncerTest: XCTestCase {
 
     func testFire() {
         sut.fire()
-
         XCTAssertNotNil(sut.callback)
     }
 
